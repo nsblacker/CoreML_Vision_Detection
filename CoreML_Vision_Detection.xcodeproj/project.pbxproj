@@ -12,6 +12,21 @@
 		90E76AEA2088443200193FF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90E76AE82088443200193FF9 /* Main.storyboard */; };
 		90E76AEC2088443300193FF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90E76AEB2088443300193FF9 /* Assets.xcassets */; };
 		90E76AEF2088443300193FF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90E76AED2088443300193FF9 /* LaunchScreen.storyboard */; };
+		90E76AF72088493100193FF9 /* DetectImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E76AF62088493100193FF9 /* DetectImageVC.swift */; };
+		90E76AF92088497E00193FF9 /* DetectVideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E76AF82088497E00193FF9 /* DetectVideoVC.swift */; };
+		90E76AFB208849B600193FF9 /* DetectCameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E76AFA208849B600193FF9 /* DetectCameraVC.swift */; };
+		90E76AFD20886DC800193FF9 /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 90E76AFC20886DC800193FF9 /* Resnet50.mlmodel */; };
+		90E76B092088712F00193FF9 /* 8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 90E76AFF2088712F00193FF9 /* 8.jpg */; };
+		90E76B0A2088712F00193FF9 /* 9.png in Resources */ = {isa = PBXBuildFile; fileRef = 90E76B002088712F00193FF9 /* 9.png */; };
+		90E76B0B2088712F00193FF9 /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 90E76B012088712F00193FF9 /* 4.jpg */; };
+		90E76B0C2088712F00193FF9 /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 90E76B022088712F00193FF9 /* 5.jpg */; };
+		90E76B0D2088712F00193FF9 /* 7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 90E76B032088712F00193FF9 /* 7.jpg */; };
+		90E76B0E2088712F00193FF9 /* 6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 90E76B042088712F00193FF9 /* 6.jpg */; };
+		90E76B0F2088712F00193FF9 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 90E76B052088712F00193FF9 /* 2.jpg */; };
+		90E76B102088712F00193FF9 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 90E76B062088712F00193FF9 /* 3.jpg */; };
+		90E76B112088712F00193FF9 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 90E76B072088712F00193FF9 /* 1.jpg */; };
+		90E76B122088712F00193FF9 /* 0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 90E76B082088712F00193FF9 /* 0.jpg */; };
+		90E76B1420888A8F00193FF9 /* VisionManafer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E76B1320888A8F00193FF9 /* VisionManafer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +37,21 @@
 		90E76AEB2088443300193FF9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		90E76AEE2088443300193FF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		90E76AF02088443300193FF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90E76AF62088493100193FF9 /* DetectImageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectImageVC.swift; sourceTree = "<group>"; };
+		90E76AF82088497E00193FF9 /* DetectVideoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectVideoVC.swift; sourceTree = "<group>"; };
+		90E76AFA208849B600193FF9 /* DetectCameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectCameraVC.swift; sourceTree = "<group>"; };
+		90E76AFC20886DC800193FF9 /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Resnet50.mlmodel; sourceTree = "<group>"; };
+		90E76AFF2088712F00193FF9 /* 8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 8.jpg; sourceTree = "<group>"; };
+		90E76B002088712F00193FF9 /* 9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 9.png; sourceTree = "<group>"; };
+		90E76B012088712F00193FF9 /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
+		90E76B022088712F00193FF9 /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpg; sourceTree = "<group>"; };
+		90E76B032088712F00193FF9 /* 7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 7.jpg; sourceTree = "<group>"; };
+		90E76B042088712F00193FF9 /* 6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 6.jpg; sourceTree = "<group>"; };
+		90E76B052088712F00193FF9 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
+		90E76B062088712F00193FF9 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
+		90E76B072088712F00193FF9 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		90E76B082088712F00193FF9 /* 0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0.jpg; sourceTree = "<group>"; };
+		90E76B1320888A8F00193FF9 /* VisionManafer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionManafer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +84,37 @@
 		90E76AE32088443200193FF9 /* CoreML_Vision_Detection */ = {
 			isa = PBXGroup;
 			children = (
+				90E76AFE2088712F00193FF9 /* images */,
+				90E76AFC20886DC800193FF9 /* Resnet50.mlmodel */,
 				90E76AE42088443200193FF9 /* AppDelegate.swift */,
 				90E76AE62088443200193FF9 /* ViewController.swift */,
+				90E76AF62088493100193FF9 /* DetectImageVC.swift */,
+				90E76AF82088497E00193FF9 /* DetectVideoVC.swift */,
+				90E76AFA208849B600193FF9 /* DetectCameraVC.swift */,
 				90E76AE82088443200193FF9 /* Main.storyboard */,
 				90E76AEB2088443300193FF9 /* Assets.xcassets */,
 				90E76AED2088443300193FF9 /* LaunchScreen.storyboard */,
 				90E76AF02088443300193FF9 /* Info.plist */,
+				90E76B1320888A8F00193FF9 /* VisionManafer.swift */,
 			);
 			path = CoreML_Vision_Detection;
+			sourceTree = "<group>";
+		};
+		90E76AFE2088712F00193FF9 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				90E76AFF2088712F00193FF9 /* 8.jpg */,
+				90E76B002088712F00193FF9 /* 9.png */,
+				90E76B012088712F00193FF9 /* 4.jpg */,
+				90E76B022088712F00193FF9 /* 5.jpg */,
+				90E76B032088712F00193FF9 /* 7.jpg */,
+				90E76B042088712F00193FF9 /* 6.jpg */,
+				90E76B052088712F00193FF9 /* 2.jpg */,
+				90E76B062088712F00193FF9 /* 3.jpg */,
+				90E76B072088712F00193FF9 /* 1.jpg */,
+				90E76B082088712F00193FF9 /* 0.jpg */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,8 +175,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90E76B102088712F00193FF9 /* 3.jpg in Resources */,
+				90E76B0E2088712F00193FF9 /* 6.jpg in Resources */,
+				90E76B0B2088712F00193FF9 /* 4.jpg in Resources */,
+				90E76B0F2088712F00193FF9 /* 2.jpg in Resources */,
+				90E76B092088712F00193FF9 /* 8.jpg in Resources */,
 				90E76AEF2088443300193FF9 /* LaunchScreen.storyboard in Resources */,
+				90E76B122088712F00193FF9 /* 0.jpg in Resources */,
+				90E76B0D2088712F00193FF9 /* 7.jpg in Resources */,
 				90E76AEC2088443300193FF9 /* Assets.xcassets in Resources */,
+				90E76B0C2088712F00193FF9 /* 5.jpg in Resources */,
+				90E76B112088712F00193FF9 /* 1.jpg in Resources */,
+				90E76B0A2088712F00193FF9 /* 9.png in Resources */,
 				90E76AEA2088443200193FF9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,7 +199,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				90E76AE72088443200193FF9 /* ViewController.swift in Sources */,
+				90E76AFB208849B600193FF9 /* DetectCameraVC.swift in Sources */,
 				90E76AE52088443200193FF9 /* AppDelegate.swift in Sources */,
+				90E76AF72088493100193FF9 /* DetectImageVC.swift in Sources */,
+				90E76AFD20886DC800193FF9 /* Resnet50.mlmodel in Sources */,
+				90E76B1420888A8F00193FF9 /* VisionManafer.swift in Sources */,
+				90E76AF92088497E00193FF9 /* DetectVideoVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +351,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UBX9CH9GDX;
 				INFOPLIST_FILE = CoreML_Vision_Detection/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -301,6 +370,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UBX9CH9GDX;
 				INFOPLIST_FILE = CoreML_Vision_Detection/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
