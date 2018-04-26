@@ -9,26 +9,34 @@
 import UIKit
 import Vision
 
+enum VNRequestType {
+    
+    case ObjDectectCoreML
+    case RectangleDetection
+    case ObjectTracking
+    case FaceRectangle
+    case FaceLandmark
+}
 
-class VisionManafer: NSObject {
+typealias MyVNRequestCompletionHandler = (VNRequest, VNRequestType ,Error?) -> Swift.Void
 
+public class VisionManafer: NSObject {
+    
     //Machine-Learning Image Analysis
-    func objDetectionUsingCoreML(pixelBuffer:CVPixelBuffer) -> Void {
+    //func objDetectionUsingCoreML(pixelBuffer:CVPixelBuffer) -> Void {
+    func objDetectionUsingCoreML(cgImage:CGImage ,completeHandler:@escaping MyVNRequestCompletionHandler) -> Void {
         
         let model = try! VNCoreMLModel(for: Resnet50().model)
-        let request = VNCoreMLRequest(model: model, completionHandler: objDetectionUsingCoreMLDidComplete)
-        let handler = VNImageRequestHandler(cvPixelBuffer: pixelBuffer)
-        try! handler.perform([request])
-    }
-    
-    func objDetectionUsingCoreMLDidComplete(request: VNRequest, error: Error?) {
-        guard let results = request.results as? [VNClassificationObservation]
-            else { fatalError("huh") }
-        //recogLabel.text = results[0].identifier
-        for classification in results {
-            print(classification.identifier, // the scene label
-                classification.confidence)
-        }
+        
+        //let handler = VNImageRequestHandler(cvPixelBuffer: pixelBuffer)
+        let handler = VNImageRequestHandler(cgImage: cgImage)
+        
+        let request = VNCoreMLRequest(model: model, completionHandler:{ (request: VNRequest, error: Error?) in
+            
+            completeHandler(request ,VNRequestType.ObjDectectCoreML ,error)
+        });
+        
+        try! handler.perform([request])//传入request数组，即可以针对同一图片，做多种识别处理
     }
     
     //Object Tracking
@@ -37,11 +45,39 @@ class VisionManafer: NSObject {
         //let request = VNtr
     }
     
+    
     //Rectangle Detection
-    func rectangleDetection(pixelBuffer:CVPixelBuffer) -> Void {
-//        let handler = VNImageRequestHandler(cvPixelBuffer: pixelBuffer)
-//        let request = VNDetectRectanglesRequest(completionHandler: <#T##VNRequestCompletionHandler?##VNRequestCompletionHandler?##(VNRequest, Error?) -> Void#>)
-//        try! handler.perform([request])
+    func rectangleDetection(cgImage:CGImage ,completeHandler:@escaping MyVNRequestCompletionHandler) -> Void {
+        
+        let handler = VNImageRequestHandler(cgImage: cgImage)
+        let request = VNDetectRectanglesRequest { (request: VNRequest, error : Error?) in
+            
+            completeHandler(request, VNRequestType.ObjDectectCoreML, error)
+        }
+        try! handler.perform([request])
+    }
+    
+    //Face Rectangle Detection
+    func faceRectangleDetection(cgImage:CGImage ,completeHandler:@escaping MyVNRequestCompletionHandler) -> Void {
+        
+        let handler = VNImageRequestHandler(cgImage: cgImage)
+        let request = VNDetectFaceRectanglesRequest { (request: VNRequest, error : Error?) in
+            
+            completeHandler(request, VNRequestType.FaceRectangle, error)
+        }
+        try! handler.perform([request])
+    }
+    
+    //Face Landmark Detection(eyes,mouth e.g.)
+    func faceLandmarkDetection(cgImage: CGImage ,completeHandler:@escaping MyVNRequestCompletionHandler) ->Void {
+        
+        let handler = VNImageRequestHandler(cgImage: cgImage)
+        
+        let request = VNDetectFaceLandmarksRequest { (request: VNRequest, error :Error?) in
+            
+            completeHandler(request, VNRequestType.FaceLandmark, error)
+        }
+        try! handler.perform([request])
     }
     
 }

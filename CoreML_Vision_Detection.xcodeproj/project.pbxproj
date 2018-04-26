@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		90CF30862091AEDD00AC4753 /* CVPixelBufferConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 90CF30852091AEDD00AC4753 /* CVPixelBufferConverter.m */; };
+		90CF30882091D04F00AC4753 /* UIImage+VisionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CF30872091D04F00AC4753 /* UIImage+VisionExtension.swift */; };
+		90CF308B2091EDCA00AC4753 /* BoundingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CF30892091EDCA00AC4753 /* BoundingBox.swift */; };
+		90CF308C2091EDCA00AC4753 /* CVPixelBuffer+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CF308A2091EDCA00AC4753 /* CVPixelBuffer+Helpers.swift */; };
 		90E76AE52088443200193FF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E76AE42088443200193FF9 /* AppDelegate.swift */; };
 		90E76AE72088443200193FF9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E76AE62088443200193FF9 /* ViewController.swift */; };
 		90E76AEA2088443200193FF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90E76AE82088443200193FF9 /* Main.storyboard */; };
@@ -30,6 +34,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		90CF30832091AEDC00AC4753 /* CoreML_Vision_Detection-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CoreML_Vision_Detection-Bridging-Header.h"; sourceTree = "<group>"; };
+		90CF30842091AEDD00AC4753 /* CVPixelBufferConverter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CVPixelBufferConverter.h; sourceTree = "<group>"; };
+		90CF30852091AEDD00AC4753 /* CVPixelBufferConverter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CVPixelBufferConverter.m; sourceTree = "<group>"; };
+		90CF30872091D04F00AC4753 /* UIImage+VisionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+VisionExtension.swift"; sourceTree = "<group>"; };
+		90CF30892091EDCA00AC4753 /* BoundingBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoundingBox.swift; sourceTree = "<group>"; };
+		90CF308A2091EDCA00AC4753 /* CVPixelBuffer+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CVPixelBuffer+Helpers.swift"; sourceTree = "<group>"; };
 		90E76AE12088443200193FF9 /* CoreML_Vision_Detection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreML_Vision_Detection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90E76AE42088443200193FF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90E76AE62088443200193FF9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -91,11 +101,17 @@
 				90E76AF62088493100193FF9 /* DetectImageVC.swift */,
 				90E76AF82088497E00193FF9 /* DetectVideoVC.swift */,
 				90E76AFA208849B600193FF9 /* DetectCameraVC.swift */,
+				90E76B1320888A8F00193FF9 /* VisionManafer.swift */,
 				90E76AE82088443200193FF9 /* Main.storyboard */,
 				90E76AEB2088443300193FF9 /* Assets.xcassets */,
 				90E76AED2088443300193FF9 /* LaunchScreen.storyboard */,
 				90E76AF02088443300193FF9 /* Info.plist */,
-				90E76B1320888A8F00193FF9 /* VisionManafer.swift */,
+				90CF30842091AEDD00AC4753 /* CVPixelBufferConverter.h */,
+				90CF30852091AEDD00AC4753 /* CVPixelBufferConverter.m */,
+				90CF30832091AEDC00AC4753 /* CoreML_Vision_Detection-Bridging-Header.h */,
+				90CF30872091D04F00AC4753 /* UIImage+VisionExtension.swift */,
+				90CF308A2091EDCA00AC4753 /* CVPixelBuffer+Helpers.swift */,
+				90CF30892091EDCA00AC4753 /* BoundingBox.swift */,
 			);
 			path = CoreML_Vision_Detection;
 			sourceTree = "<group>";
@@ -149,6 +165,7 @@
 				TargetAttributes = {
 					90E76AE02088443200193FF9 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 				};
 			};
@@ -198,10 +215,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90CF30862091AEDD00AC4753 /* CVPixelBufferConverter.m in Sources */,
+				90CF30882091D04F00AC4753 /* UIImage+VisionExtension.swift in Sources */,
 				90E76AE72088443200193FF9 /* ViewController.swift in Sources */,
 				90E76AFB208849B600193FF9 /* DetectCameraVC.swift in Sources */,
 				90E76AE52088443200193FF9 /* AppDelegate.swift in Sources */,
+				90CF308B2091EDCA00AC4753 /* BoundingBox.swift in Sources */,
 				90E76AF72088493100193FF9 /* DetectImageVC.swift in Sources */,
+				90CF308C2091EDCA00AC4753 /* CVPixelBuffer+Helpers.swift in Sources */,
 				90E76AFD20886DC800193FF9 /* Resnet50.mlmodel in Sources */,
 				90E76B1420888A8F00193FF9 /* VisionManafer.swift in Sources */,
 				90E76AF92088497E00193FF9 /* DetectVideoVC.swift in Sources */,
@@ -348,6 +369,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UBX9CH9GDX;
 				INFOPLIST_FILE = CoreML_Vision_Detection/Info.plist;
@@ -358,6 +380,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nsblacker..CoreML-Vision-Detection";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CoreML_Vision_Detection/CoreML_Vision_Detection-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -367,6 +391,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UBX9CH9GDX;
 				INFOPLIST_FILE = CoreML_Vision_Detection/Info.plist;
@@ -377,6 +402,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nsblacker..CoreML-Vision-Detection";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CoreML_Vision_Detection/CoreML_Vision_Detection-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

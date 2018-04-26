@@ -16,6 +16,7 @@ class DetectImageVC: UIViewController,UIImagePickerControllerDelegate ,UINavigat
     var imagePicker: UIPickerView!
     var imageArray = ["0.jpg" , "1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg","9.jpg"]
     var curImageFile: String!
+    var vision: VisionManafer!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,53 @@ class DetectImageVC: UIViewController,UIImagePickerControllerDelegate ,UINavigat
         // Do any additional setup after loading the view.
         self.view.backgroundColor = UIColor.white;
         setupUI()
+        vision = VisionManafer()
+    }
+    
+    //Mark : -Actions
+    @objc func runModel() {
+        print("runModel")
+        let cgImage = imageView!.image?.cgImage
+//        vision.objDetectionUsingCoreML(cgImage: cgImage! ,completeHandler: { (request:VNRequest, type:VNRequestType ,error:Error?) -> Swift.Void in
+//
+//            guard let results = request.results as? [VNClassificationObservation]
+//                else { fatalError("huh") }
+//            //recogLabel.text = results[0].identifier
+//            for classification in results {
+//                //print(classification.identifier, classification.confidence)
+//            }
+//        })
+        
+//        vision.rectangleDetection(cgImage: cgImage! ,completeHandler:
+//            { (request:VNRequest, type:VNRequestType ,error:Error?) -> Swift.Void in
+//                
+//            guard let results = request.results as? [VNRectangleObservation]
+//                else { fatalError("huh") }
+//                
+//            for rectangle in results {
+//                print(rectangle.boundingBox, rectangle.confidence)
+//            }
+//        })
+        
+//        vision.faceRectangleDetection(cgImage: cgImage! ,completeHandler: { (request: VNRequest, type: VNRequestType, error: Error?) in
+//            guard let results = request.results as? [VNFaceObservation]
+//            else { fatalError("huh") }
+//            for face in results {
+//                print(face.boundingBox, face.confidence)
+//            }
+//        })
+        
+//        vision.faceLandmarkDetection(cgImage: cgImage! , completeHandler: {
+//            (request: VNRequest, type: VNRequestType, error: Error?) in
+//            guard let results = request.results as? [VNFaceObservation]
+//                else { fatalError("huh") }
+//            for face in results {
+//                print(face.boundingBox, face.landmarks, face.confidence)
+//            }
+//        })
+        
+        
+        
     }
     
     func setupUI() {
@@ -53,13 +101,6 @@ class DetectImageVC: UIViewController,UIImagePickerControllerDelegate ,UINavigat
         runBtn.setTitleColor(UIColor.black, for: UIControlState.normal)
         runBtn.addTarget(self, action: #selector(runModel), for: UIControlEvents.touchUpInside)
         self.view.addSubview(runBtn)
-    }
-    
-    //Mark : -Actions
-    @objc func runModel() {
-        print("runModel")
-        //let imageData = imageView!.image?.cgImage
-        
     }
     
     @objc func openLibrary() {
@@ -99,6 +140,7 @@ class DetectImageVC: UIViewController,UIImagePickerControllerDelegate ,UINavigat
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1;
     }
+    
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return imageArray.count
     }
@@ -112,18 +154,16 @@ class DetectImageVC: UIViewController,UIImagePickerControllerDelegate ,UINavigat
         return imageArray[row];
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        //run model
+
         let str = imageArray[row]
         curImageFile = str
         let pickedImage = UIImage(named: curImageFile)
         imageView!.contentMode = .scaleToFill
         imageView!.image = pickedImage
     }
-    
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
 }

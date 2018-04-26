@@ -12,6 +12,8 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     
     let funtionSelect = ["图片识别","视频识别","相机识别"];
     
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
